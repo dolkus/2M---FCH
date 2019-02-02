@@ -1,0 +1,120 @@
+\section{Primitivní funkce a neurčitý integrál \\ Základní integrační metody}
+
+
+\begin{enumerate}
+\item Funkciu $F$ nazveme \textit{primitívnou funkciou} k funkcií $f$ na intervale $(a,b)$, ak pre všetky $x \in (a,b)$ platí
+$F'(x)=f(x)$.
+\item Ak je funkcia $f(x)$ definovaná a spojitá na otvorenom intervale $(a,b)$ a funkcia $F(x)$ je jej primitívna funkcia pre všetky $x \in (a,b)$, tak
+\begin{align*}
+\int f(x) \,dx = F(x)+c, \quad x \in (a,b), \quad c \in \mathbb{R}.
+\end{align*}
+Výraz $\int f(x) \,dx$ nazývame neurčitým integrálom funkcie $f$. Neurčitý integrál je teda \textit{množina} primitívnych funkcií.
+\item Základné vlastnosti integrálu:
+\begin{enumerate}
+\item[a)]{\textit{Homogenita}\quad - \quad  $\int cf(x) \,dx=c\int f(x) \,dx$, $c \in \mathbb{R}$ pre všetky $c \in \mathbb{R}$ }
+\item[b)]{\textit{Aditivita} \quad - \quad $\int f(x)+g(x) \,dx=\int f(x) \,dx+\int g(x) \,dx$ pre všetky funkcie $f,g$  }
+\end{enumerate}
+\item Tabuľka základných integračných vzorcov \\
+\begin{minipage}[t]{0.40\linewidth}
+\begin{align*}
+&\int x^n dx &=&\frac{x^{n+1}}{n+1} + C, \quad n \neq -1 \\
+&\int \frac{f'(x)}{f(x)} dx &=&\ln(|f(x)|) + C, \quad f(x) \neq 0 \\
+&\int \frac{1}{1+x^2} dx &=&\left\{ \begin{array}{r@{\quad}c}
+    \arctan(x) + C_1 \\
+    -\arccotg(x) + C_2 \\ \end{array} \right. \\
+&\int \frac{1}{\sqrt{1-x^2}} dx &=&\left\{ \begin{array}{r@{\quad}c}
+    \arcsin(x) + C_1 \\
+    -\arccos(x) + C_2 \\ \end{array} \right. \\
+&\int \frac{1}{\sqrt{x^2\pm1}} dx &=&\ln(|x+\sqrt{x^2 \pm 1}|) +C \\
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.52\linewidth}
+\begin{align*}
+&\int a^x dx &=& \frac{a^x}{\ln(a)}+C, \quad a>0, a \neq 1 \\
+&\int \sin(x) dx &=& -\cos(x)+C \\
+&\int \cos(x) dx &=& \sin(x)+C \\
+&\int \frac{dx}{\sin^2(x)} &=& -\cotg(x)+C \\
+&\int \frac{dx}{\cos^2(x)} &=& \tan(x)+C 
+\end{align*}
+\end{minipage}
+
+\item Vypočítajte nasledujúce neurčité integrály použitím základných vlastností neurčitého integrálu, základných integračných vzorcov a vlastností elementárnych funkcií
+\begin{enumerate}
+\item{$ \int 2 \cos (x) \,dx$} \hspace{\fill} [$2 \sin (x) +c$]
+\item{$ \int (2x^2-3x+5)\,dx$} \hspace{\fill} [$ \frac{2}{3}x^3 -  \frac{3}{2}x^2 +5x +c$]
+\item{$ \int (4-x^2)^3\,dx$} \hspace{\fill} [$-\frac{1}{7}x^7+\frac{12}{5}  x^5- 16x^3  +64x+c$]
+\item{$ \int (\frac{2}{x}+\frac{3}{x^3}+\frac{4}{x^4})\,dx$} \hspace{\fill} [$2 \ln(x) - \frac{3}{2} \frac{1}{x^2} -\frac{4}{3} \frac{1}{x^3} +c$]
+\item{$ \int (\pi+\sin(x))\,dx$} \hspace{\fill} [$ \pi x - \cos(x) +c$]
+\end{enumerate}
+
+\item Odvodenie metódy per partes
+\begin{align*}
+(u(x)v(x))'&=u'(x)v(x)+v'(x)u(x) \\
+\int (u(x)v(x))'\, dx &= \int (u'(x)v(x)+v'(x)u(x)) \,dx\\
+u(x)v(x)&= \int u'(x)v(x) \,dx + \int v'(x)u(x) \,dx \\
+\int u'(x)v(x) \,dx&=u(x)v(x)- \int v'(x)u(x) \,dx 
+\end{align*}
+
+\item \texttt{Metóda per partes} \\
+Nech $u,v$ sú diferencovateľné funkcie premennej $x$. Potom platí
+\begin{align*}
+\int u'(x)v(x) \,dx=u(x)v(x)- \int v'(x)u(x) \,dx .
+\end{align*}
+
+\item Vypočítajte nasledujúce neurčité integrály použitím metódy per partes, základných vlastností neurčitého integrálu a základných integračných vzorcov
+\begin{enumerate}
+\item{$ \int xe^x \,dx$} \hspace{\fill} [$x e^x - e^x +c$]
+\item{$ \int x\sin(x) \,dx$} \hspace{\fill} [$ \sin(x)- x \cos(x) +c$]
+\item{$ \int x^2 e^x \,dx$} \hspace{\fill} [$x^2 e^x -2x e^x+2e^x +c$]
+\item{$ \int x^2 \cos(x) \,dx$} \hspace{\fill} [$x^2 \sin (x) + 2 x \cos (x) - 2\sin (x) +c$]
+\item{$ \int \ln(x) \,dx$} \hspace{\fill} [$ x \ln (x)-x+c$]
+\item{$ \int x^2\arctan(x) \,dx$} \hspace{\fill} [$ \frac{1}{3}x^3\arctan(x)-\frac{1}{6}^2+\frac{1}{6}\ln(x^2+1)+c$]
+\item{$ \int \sin(\ln(x)) \,dx$} \hspace{\fill} [$-\frac{1}{2}x(\cos(\ln(x))-\sin(\ln(x))) +c$]
+\item{$\int  \cos^2(x) \,dx$} \hspace{\fill} [$ \frac{1}{2}(x+\sin(x)\cos(x))+c$]
+\item{$ \int \frac{\ln^2(x)}{x^2} \,dx$} \hspace{\fill} [$ -\frac{\ln^2(x)+2\ln(x)+2}{x}+c$]
+\end{enumerate}
+
+
+\item \texttt{Metóda zavedenia nového argumentu} \\
+Nech $\int f(x) \, dx=F(x)+c$ potom
+\begin{align*}
+\int f(\phi(x))\phi'(x) \, dx=\int f(u) \, du = F(u) +c
+\end{align*}
+kde $u=\phi(x)$ je spojite diferencovateľná funkcia.
+
+\item  \texttt{Substitučná metóda} \\
+Ak je $f(x)$ spojitá funkcia, potom substitúciou $x=\phi(t)$, kde $\phi(t)$ je spojitá funkcia spoločne so svojou deriváciou $\phi'(t)$ dostaneme
+\begin{align*}
+\int f(x) \, dx=\int f(\phi(t))\phi'(t) \, dt.
+\end{align*}
+\textit{Poznámka: Niekedy sa substitučná metóda kombinácia predošlých dvoch metód}
+
+\item Vypočítajte nasledujúce neurčité integrály použitím základných vlastností neurčitého integrálu, základných integračných vzorcov a substitučnej metódy
+\begin{enumerate}
+\item[a)]{$ \int \sin(2x+3) \,dx$}\hspace{\fill} [$-\frac{1}{2}\cos(2x+3) +c$]
+\item[b)]{$ \int \frac{1}{2x+\pi} \,dx$}\hspace{\fill}[$\frac{1}{2}\ln(2x+\pi) +c$]
+\item[c)]{$ \int 3x\cos(x^2+6) \,dx$}\hspace{\fill}[$\frac{3}{2}\sin(x^2+6) +c$]
+\item[d)]{$ \int x\sqrt{x^2+1} \,dx$}
+\hspace{\fill}[$\frac{1}{3}(x^2+1)^{\frac{3}{2}} +c$]
+\item[e)]{$ \int \frac{e^x+e^{3x}}{e^{2x}} \,dx$}
+\hspace{\fill}[$e^x-e^{-x} +c$]
+\item[f)]{$ \int \cos(x)\frac{\sin^2(x)+\sin(x)}{1+\sin(x)} \,dx$}
+\hspace{\fill}[$-\frac{1}{2}\cos^2(x) +c$]
+\item[g)]{$ \int \frac{\ln(x)}{x} \,dx$}
+\hspace{\fill}[$\frac{1}{2}\ln^2(x) +c$]
+\end{enumerate}
+
+
+\item Vypočítajte nasledujúce neurčité integrály použitím základných vlastností neurčitého integrálu, základných integračných vzorcov, substitučnej metódy, metódy zavedenia nového argumentu, metódy per partes a kombinovaných metód
+
+\begin{enumerate}
+\item[a)]{$\int x^5 e^{x^3} \,dx $}\hspace{\fill}[$\frac{1}{3}e^{x^3}(x^3-1) +c$]
+\item[b)]{$\int x\sin{\sqrt{x}} \,dx $}\hspace{\fill}[$6(x-2)\sin(\sqrt(x))-2(x-6)\sqrt{x}\cos(\sqrt{x}) +c$]
+\item[c)]{$\int \frac{\ln(\sin(x))}{\sin^2(x)} \,dx $}\hspace{\fill}[$-x -\cotg(x)(\ln(\sin(x))+1)+c$]
+\item[d)]{$\int e^{\sqrt{x}} \,dx $}\hspace{\fill}[$2e^{\sqrt{x}}(\sqrt{x}-1)+c$]
+\item[e)]{$\int \frac{1}{1+e^x} \,dx $}\hspace{\fill}[$x-\ln(1+e^x)+c$]
+
+
+\end{enumerate}
+
+\end{enumerate}

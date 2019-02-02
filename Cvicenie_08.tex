@@ -1,0 +1,263 @@
+
+\section{Vázané a globální extrémy funkcí dvou proměnných}
+
+\begin{enumerate}
+
+\item \textbf{Motivace:} minule jsme se zabývali studiem tzv. lokálních extrémů funkcí dvou proměnných, tedy takových bodů, které jsou minimem či maximem vzhledem ke svému okolí.
+
+Dnes chceme dojít k pojmu globálních extrémů, tedy takových bodů, které jsou minimem či maximem funkce na celém jejím definičním oboru. Proto se nejprve musíme zabývat hledáním tzv. vázaných extrémů, tedy takových bodů, které jsou extrémem funkce na nějaké vazbě. 
+
+\item \textbf{Definice:} Nechť $F:\R^2 \rightarrow \R$, hledáme lokální extrémy funkce $f$ na množině $M \in \R^2$ určené rovnicí $F(x,y)=0$, tzv. vazbou. Tyto extrémy nazveme vázané extrémy. 
+
+\item \textbf{Příklad:} Určete vázané extrémy funkce $f(x,y) = x^2 + y^2$, je-li vazba $y - x^2 = 0$.
+
+V tomto případě lze z vazby vyjádřit závislost jednotlivých proměnných: $y = x^2$
+
+$f(x) = x^2 + x^4$
+
+$f'(x) = 2x + 4x^3 = 2x(1+2x^2) = 0 \Rightarrow x=0$ tedy máme 1 stacionární bod.
+
+$f'(x) = 2 + 12x^2$, dosadíme náš stacionární bod:
+$f'(0) = 2 > 0$, jedná se tedy o vázané minimum. 
+
+\item Nelze-li jednotlivé proměnné navzájem vyjádřit, pak postupujeme následovně: sestavíme tzv. Lagrangeovu funkci 
+$L(x,y,\lambda) = f(x,y) + \lambda F(x,y)$ 
+a hledáme její stacionární bod 
+$[x^0,y^0,\lambda^0]$. 
+Následně vytvoříme funkci
+$L_{\lambda^0}(x,y) = L(x,y,\lambda^0)$ 
+a hledáme její extrémy. Platí, že má-li funkce 
+$L_{\lambda^0}(x,y)$ v bodě $[x^0,y^0]$ lokální extrém, pak má funkce $f(x,y)$ v témže bodě lokální extrém stejného typu. Tento postup si vyzkoušíme na následujícím příkladu:
+
+\item \textbf{Příklad:} Nalezněte vázané extrémy funkce $f(x,y) = x + y$, je-li vazebná podmínka: $\frac{1}{x^2} + \frac{1}{y^2} = 1$
+
+\textbf{Postup:}
+
+$L(x,y,\lambda) = x + y + \lambda(\frac{1}{x^2} + \frac{1}{y^2} - 1)$
+
+\begin{tabular}{lcl}
+  \begin{tabular}{l}
+  $L'_x(x,y,\lambda) = 1 - \frac{2\lambda}{x^3} = 0$
+  \\
+  $L'_y(x,y,\lambda) = 1 - \frac{2\lambda}{y^3} = 0$
+  \\
+  $L'_\lambda(x,y,\lambda) = \frac{1}{x^2} + \frac{1}{y^2} - 1 = 0$
+  \end{tabular}
+&
+$\Rightarrow$
+&
+  \begin{tabular}{l}
+  $A[\sqrt{2},\sqrt{2},\sqrt{2}]$
+  \\
+  $B[-\sqrt{2},-\sqrt{2},-\sqrt{2}]$
+  \end{tabular}
+\end{tabular}
+
+bod $A$:
+
+\begin{tabular}{lll}
+$L_{\sqrt{2}}(x,y) = xy + \sqrt{2}(\frac{1}{x^2} + \frac{1}{y^2} - 1)$
+&
+$L_{\sqrt{2}}{}''_{xx}(x,y) = \frac{6\sqrt{2}}{x^4}$
+&
+$L_{\sqrt{2}}{}''_{xx}(A) = \frac{3\sqrt{2}}{2}$
+\\
+$L_{\sqrt{2}}{}'_x(x,y) = 1 - \frac{2\sqrt{2}}{x^3}$
+&
+$L_{\sqrt{2}}{}''_{xy}(x,y) = 0$
+&
+\\
+$L_{\sqrt{2}}{}'_y(x,y) = 1 - \frac{2\sqrt{2}}{y^3}$
+&
+$L_{\sqrt{2}}{}''_{yy}(x,y) = \frac{6\sqrt{2}}{y^4}$
+&
+$L_{\sqrt{2}}{}''_{yy}(A) = \frac{3\sqrt{2}}{2}$
+\end{tabular}
+
+$D_1 = \frac{3\sqrt{2}}{2} > 0$, 
+$D_2 = (\frac{3\sqrt{2}}{2})^2 - 0^2 > 0$
+$\Rightarrow$ pos. def. $\Rightarrow$ vázané minimum
+
+bod $A$:
+
+\begin{tabular}{lll}
+$L_{-\sqrt{2}}(x,y) = xy - \sqrt{2}(\frac{1}{x^2} + \frac{1}{y^2} - 1)$
+&
+$L_{-\sqrt{2}}{}''_{xx}(x,y) = -\frac{6\sqrt{2}}{x^4}$
+&
+$L_{-\sqrt{2}}{}''_{xx}(A) = -\frac{3\sqrt{2}}{2}$
+\\
+$L_{-\sqrt{2}}{}'_x(x,y) = 1 + \frac{2\sqrt{2}}{x^3}$
+&
+$L_{-\sqrt{2}}{}''_{xy}(x,y) = 0$
+&
+\\
+$L_{-\sqrt{2}}{}'_y(x,y) = 1 + \frac{2\sqrt{2}}{y^3}$
+&
+$L_{-\sqrt{2}}{}''_{yy}(x,y) = -\frac{6\sqrt{2}}{y^4}$
+&
+$L_{-\sqrt{2}}{}''_{yy}(A) = -\frac{3\sqrt{2}}{2}$
+\end{tabular}
+
+$D_1 = -\frac{3\sqrt{2}}{2} < 0$, 
+$D_2 = (-\frac{3\sqrt{2}}{2})^2 - 0^2 > 0$
+$\Rightarrow$ neg. def. $\Rightarrow$ vázané maximum
+
+\item V některých případech nelze podle nám doposud známých kriterií rozhodnout (tj. tehdy, je-li kvadratická forma semidefinitní, ale není definitní). V takovém případě je postup takový že z vazebné podmínky získáme lineární závislost diferenciálů, jeden z nich pak lze snadno vyjádřit pomocí druhého a tak jej dosadíme do původní kvadratické formy, čímž se stane formou jediné proměnné a o její definitnosti lze rozhodnout podle známé definice.
+
+\item \textbf{Příklad:} Nalezněte vázané extrémy funkce $f(x,y)=xy$, je-li vazebná podmínka: $x^2 + y^2 = 1$
+
+\textbf{Postup:}
+
+$L(x,y,\lambda) = xy + \lambda(x^2 + y^2 - 1)$
+
+\begin{tabular}{lcl}
+  \begin{tabular}{l}
+  $L'_x(x,y,\lambda) = y + 2 \lambda x = 0$
+  \\
+  $L'_y(x,y,\lambda) = x + 2 \lambda y = 0$
+  \\
+  $L'_\lambda(x,y,\lambda) = x^2 + y^2 - 1 = 0$
+  \end{tabular}
+&
+$\Rightarrow$
+&
+  \begin{tabular}{ll}
+  $A[\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2},-\frac{1}{2}]$
+  & 
+  $B[\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2},\frac{1}{2}]$
+  \\
+  $C[-\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2},\frac{1}{2}]$ 
+  & 
+  $D[\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2},-\frac{1}{2}]$
+  \end{tabular}
+\end{tabular}
+
+body $A$ a $D$:
+
+\begin{tabular}{lll}
+$L_{-\frac{1}{2}}(x,y) = xy - \frac{1}{2}(x^2 + y^2 - 1)$
+&
+$L_{-\frac{1}{2}}{}''_{xx}(x,y) = -1$
+&
+$D_1 = -1 < 0$
+\\
+$L_{-\frac{1}{2}}{}'_x(x,y) = y - x$
+&
+$L_{-\frac{1}{2}}{}''_{xy}(x,y) = 1$
+&
+$D_2 = (-1)^2 - 1^2 = 0 \geq 0$
+\\
+$L_{-\frac{1}{2}}{}'_y(x,y) = x - y$
+&
+$L_{-\frac{1}{2}}{}''_{yy}(x,y) = -1$
+&
+neg. semidef.
+\end{tabular}
+
+resp. body $B$ a $C$:
+
+\begin{tabular}{lll}
+$L_{\frac{1}{2}}(x,y) = xy + \frac{1}{2}(x^2 + y^2 - 1)$
+&
+$L_{\frac{1}{2}}{}''_{xx}(x,y) = 1$
+&
+$D_1 = 1 > 0$
+\\
+$L_{\frac{1}{2}}{}'_x(x,y) = y + x$
+&
+$L_{\frac{1}{2}}{}''_{xy}(x,y) = 1$
+&
+$D_2 = 1^2 - 1^2 = 0 \geq 0$
+\\
+$L_{\frac{1}{2}}{}'_y(x,y) = x + y$
+&
+$L_{\frac{1}{2}}{}''_{yy}(x,y) = 1$
+&
+pos. semidef.
+\end{tabular}
+
+kvadratické formy jsou v obou případech toliko semidefinitní, tedy o extrému z nich nelze rozhodnout. Proto zdiferencujeme vazebnou podmínku: 
+
+$
+x^2 + y^2 = 1 
+\Rightarrow 
+x^2 + y^2 - 1 = 0
+\Rightarrow 
+2x \d x + 2y \d y = 0
+\Rightarrow 
+\d y = -\frac{x}{y} \d x
+$
+
+a dosadíme do původní kvadratické formy pro $L_{-\frac{1}{2}}$:
+$
+-\d x^2 + 2\d xy - \d y^2 =
+$
+
+$
+= -\d x^2 \left(1 + 2\frac{x}{y} + \frac{x^2}{y^2}\right)
+= -\d x^2 \left(1 + 2\frac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{2}}{2}} + \frac{(\frac{\sqrt{2}}{2})^2}{(\frac{\sqrt{2}}{2})^2}\right)
+= -4\d x^2 < 0
+$
+
+pro body $A$ a $D$ je tedy tato kvadratická forma negativně definitní, a tudíž jsou v bodech $A$ a $D$ vázaná maxima.
+
+obdobně pro kvadratickou formu pro $L_{\frac{1}{2}}$:
+$
+\d x^2 + 2\d xy + \d y^2 =
+$
+
+$
+= \d x^2 \left(1 - 2\frac{x}{y} + \frac{x^2}{y^2}\right)
+= \d x^2 \left(1 + 2\frac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{2}}{2}} + \frac{(\pm \frac{\sqrt{2}}{2})^2}{(\pm \frac{\sqrt{2}}{2})^2}\right)
+= 4\d x^2 > 0
+$
+pro body $B$ a $C$ je tedy tato kvadratická forma positivně definitní, a tudíž jsou v bodech $B$ a $C$ vázaná minima.
+
+\item \textbf{Definice:} Mějme funkci $f:\R \times \R \rightarrow \R$. Řekneme, že funkce $f$ má v bodě $A$ ostré globální minimum (resp. maximum), jestliže $\forall X[x,y]  \in \mathrm{Dom}(f)$ platí $f(x,y) > f(x_0,y_0)$ (resp. $f(x,y) < f(x_0,y_0)$).
+
+\item Hledáme-li globální extrémy funkce, pak musíme na vnitřku $\mathrm{Dom}(f)$ hledat lokální extrémy, na hranici $\mathrm{Dom}(f)$ vázané extrémy a ze všech možných pak vybereme maximum a minimum. Tento postup si objasníme na následujícím příkladu:
+
+\item \textbf{Příklad:} Nalezněte globální extrémy funkce 
+$f(x,y) = \sin (x) + \sin (y) + \sin (x+y)$
+definované na oblasti určené nerovnostmi
+$0 \leq x \leq \frac{\pi}{2}$,
+$0 \leq y \leq \frac{\pi}{2}$
+
+\textbf{Postup:}
+\begin{enumerate}
+\item určíme body \uv{podezřelé} z lokálního extrému na vnitřku definičního oboru:
+$A[\frac{\pi}{3},\frac{\pi}{3}]$
+\item určíme body \uv{podezřelé} z vázaného extrému na hranici definičního oboru:
+  \begin{enumerate}
+  \item $x=0$, $0 \leq y \leq \frac{\pi}{2}$:
+        $B[0,\frac{\pi}{2}]$,
+        $C[0,0]$
+  \item $y=0$, $0 \leq x \leq \frac{\pi}{2}$:
+        $C[0,0]$,
+        $D[\frac{\pi}{2},0]$  
+  \item $x=\frac{\pi}{2}$, $0 \leq y \leq \frac{\pi}{2}$:
+        $D[\frac{\pi}{2},0]$,
+        $E[\frac{\pi}{2},\frac{\pi}{4}]$
+  \item $y=\frac{\pi}{2}$, $0 \leq x \leq \frac{\pi}{2}$:
+        $B[0,\frac{\pi}{2}]$,
+        $F[\frac{\pi}{4},\frac{\pi}{2}]$
+  \end{enumerate}
+\item vyhodnotíme funkční hodnoty v \uv{podezřelých} bodech:
+
+$f(A) = \frac{3}{2} \sqrt{3}$
+
+$f(B) = f(D) = f(G) = 2$
+
+$f(C) = 0$
+
+$f(E) = f(F) = 1 + \sqrt{2}$
+
+Globální maximum je tedy v bodě: 
+$f(\frac{\pi}{3},\frac{\pi}{3}) = \frac{3}{2} \sqrt{3}$
+a globální minimum je v bodě: 
+$f(0,0) = 0$.
+\end{enumerate}
+
+
+\end{enumerate}

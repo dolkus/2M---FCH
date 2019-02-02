@@ -1,0 +1,82 @@
+\section{Lokální extrémy funkce dvou reálných proměnných}
+
+\begin{enumerate}
+
+\item Mějme funkci $f:\R \times \R \rightarrow \R$. Řekneme, že funkce $f$ má v bodě $A$ ostré lokální minimum (resp. maximum), jestliže $\exists$ ryzí okolí $\bar{O}(A)$ bodu $A[x_0,y_0]$ takové že $\forall X[x,y]  \in \bar{O}(A)$: $f(x,y) > f(x_0,y_0)$ (resp. $f(x,y) < f(x_0,y_0)$)
+
+\item nutnou podmínkou existence lokálního extrému je, aby byly obě parciální derivace nulové, tedy $f^\prime_x (A) = f^\prime_y (A) = 0$ (takové body nazveme stacionární) nebo, že alespoň jedna z derivací neexistuje. 
+
+\item vektoru $\vec{x}$ lze přiřadit číslo pomocí kvadratické formy: 
+$$
+\vec{x} \rightarrow \kappa = a_{11}\d x^2 + (a_{12} + a_{21}) \d x \d y + a_{22}\d y^2
+$$
+kvadratické formě přísluší její matice 
+$
+\left[
+\begin{matrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{matrix}
+\right]
+$
+
+takovou formou je např. nám již známý druhý diferenciál
+$$
+\d^2f_A = f^{\prime\prime}_{xx}(A) \d x^2
+        +2f^{\prime\prime}_{xy}(A) \d x \d y
+        + f^{\prime\prime}_{yy}(A) \d y^2
+$$
+a maticí této kvadratické formy je tzv. Hessova matice
+$
+H=
+\left[
+\begin{matrix}
+f^{\prime\prime}_{xx}(A) & f^{\prime\prime}_{xy}(A) \\
+f^{\prime\prime}_{xy}(A) & f^{\prime\prime}_{yy}(A) 
+\end{matrix}
+\right]
+$
+jejíž determinant je
+$
+det(H)=f^{\prime\prime}_{xx}(A) f^{\prime\prime}_{yy}(A)
+     - \left(f^{\prime\prime}_{xy}(A)\right)^2
+$
+
+\item Postačující podmínkou existence lokálního extrému je definitnost kvadratické formy:
+\begin{enumerate}
+\item je-li kvadratická forma positivně definitní, pak je daný stacionární bod lokálním minimem
+$$
+\forall \vec{x} \neq \vec{o} :
+\d^2f_A > 0 
+\Rightarrow \exists \mathrm{lok.min.}
+$$
+Positivní definitnost lze ověřit pomocí Sylvesterova kriteria: 
+$$
+f^{\prime\prime}_{xx}(A) > 0; det(H) > 0
+\Rightarrow \mathrm{pos.def.}
+$$
+
+\item je-li kvadratická forma negativně definitní, pak je daný stacionární bod lokálním maximem
+$$
+\forall \vec{x} \neq \vec{o} :
+\d^2f_A < 0 
+\Rightarrow \exists \mathrm{lok.max.}
+$$
+Negativní definitnost lze ověřit pomocí Sylvesterova kriteria: 
+$$
+f^{\prime\prime}_{xx}(A) < 0; det(H) > 0
+\Rightarrow \mathrm{neg.def.}
+$$
+
+\end{enumerate}
+Postačující podmínkou neexistence lokálního extrému (tj. existence sedlového bodu) je indefinitnost kvadratické formy
+$$
+\exists \vec{x_1},\vec{x_2} :
+\d^2f_A(x_1) > 0  \vee \d^2f_A(x_2) < 0 
+\Rightarrow \nexists \mathrm{extrem}
+$$
+Sylvestrovo kriterium říká, že kvadratická forma je indefinitní, není-li positivně ani negativně semidefinitní (tj. nejsou-li nerovnosti splněny ani v případě neostrých nerovností)
+
+V případě semidefinitnosti (tj. pokud jsou nerovnosti neostré) nelze o extrému rozhodnout, pro takové případy existují složitější podmínky (ne)existence lokálních extrémů, těmi se však zabývat nebudeme.
+
+\end{enumerate}
