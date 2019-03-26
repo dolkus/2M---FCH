@@ -10,7 +10,7 @@
 \item{$ \int \frac{x}{\sin^2(x)} \,dx$} \hspace{\fill} [$2-x\cotg(x)+\ln(|\sin(x)|)+c$]
 \item{$ \int e^x\cos(x) \,dx$} \hspace{\fill} [$\frac{e^x}{2}(\sin(x)+\cos(x)) +c$]
 \item{$ \int \frac{\ln(x)}{x^2} \,dx$} \hspace{\fill} [$-\frac{1}{x}(\ln(x)+1) +c$]
-\item{$ \int \frac{\ln^2(x)}{\sqrt(x)} \,dx$} \hspace{\fill} [$\sqrt{x}(2\ln^2(x)-8\ln(x)+16) +c$]
+\item{$ \int \frac{\ln^2(x)}{\sqrt{x}} \,dx$} \hspace{\fill} [$\sqrt{x}(2\ln^2(x)-8\ln(x)+16) +c$]
 \item{$ \int x e^{-x} \,dx$} \hspace{\fill} [$e^{-x}(-x-1) +c$]
 \item{$ \int \cos(\ln(x)) \,dx$} \hspace{\fill} [$\frac{x}{2}(\cos(\ln(x))+\sin(\ln(x)))+c$]
 
@@ -27,11 +27,11 @@
 
 \item Vypočítajte určité integrály
 \begin{enumerate}
-\item{$ \int_1^2 \frac{x}{(x^2+1)^{\frac{3}{3}}} \,dx$} \hspace{\fill} [$\frac{-1}{\sqrt{5}}+\frac{1}{\sqrt{2}}$]
-\item{$ \int_0^{\frac{\pi}{2}} \frac{\sin^3(x)}{1+\cos^2(x)} \,dx$} \hspace{\fill} [$-1+\frac{\pi}{2}$]
-\item{$ \int_0^{\frac{\pi}{2}} \sin^3(x)\cos^2(x) \,dx$} \hspace{\fill} [$\frac{1}{3}-\frac{1}{5} +c$]
-\item{$ \int_4^5 \frac{\sqrt{x-4}}{1+\sqrt{x-4}} \,dx$} \hspace{\fill} [$-1+2\ln(2)$]
-\item{$ \int_{\ln^2}^{\ln(3)} \frac{e^x}{e^{2x}-1} \,dx$} \hspace{\fill} [$\frac{1}{2}(\ln(\frac{1}{2})-\ln(\frac{1}{3}))$]
+\item{$ \int \limits_1^2 \frac{x}{(x^2+1)^{\frac{3}{3}}} \,dx$} \hspace{\fill} [$\frac{-1}{\sqrt{5}}+\frac{1}{\sqrt{2}}$]
+\item{$ \int \limits_0^{\frac{\pi}{2}} \frac{\sin^3(x)}{1+\cos^2(x)} \,dx$} \hspace{\fill} [$-1+\frac{\pi}{2}$]
+\item{$ \int \limits_0^{\frac{\pi}{2}} \sin^3(x)\cos^2(x) \,dx$} \hspace{\fill} [$\frac{1}{3}-\frac{1}{5} +c$]
+\item{$ \int \limits_4^5 \frac{\sqrt{x-4}}{1+\sqrt{x-4}} \,dx$} \hspace{\fill} [$-1+2\ln(2)$]
+\item{$ \int \limits_{\ln(2)}^{\ln(3)} \frac{e^x}{e^{2x}-1} \,dx$} \hspace{\fill} [$\frac{1}{2}(\ln(\frac{1}{2})-\ln(\frac{1}{3}))$]
 \end{enumerate}
 
 
@@ -55,38 +55,5 @@
 \begin{enumerate}
 \item{$y=\sqrt{r^2-x^2}$} \hspace{\fill} [$4\pi r^2$]
 \end{enumerate}
-
-
-\item \textit{Reálna funkcia dvoch reálných premenných} $f:\mathbb{R}^2 \to \mathbb{R}$ je zobrazenie, ktoré každému $x \in \mathbb{R}$ priradí najviac jedno $f(x) \in \mathbb{R}$. \\
-Prvky $x=[x_1,x_2]$ v $\mathbb{R}^2$ sa nazývajú body $2$-rozmerného priestoru $\mathbb{R}^2$, teda \textit{body v rovine}.  \\
-Množina $\mathcal{D}(f)=\{x \in \mathbb{R}^2: \exists y \in \mathbb{R}: f(x)=y\}$ sa nazýva \textit{definičný obor funkcie $f$}.\\
-Množina $\mathcal{H}(f)=\{y \in \mathbb{R}: \exists x \in \mathcal{D}(f): f(x)=y\}$ sa nazýva \textit{obor hodnôt funkcie $f$}.\\
-Množina $\mathcal{G}(f)=\{[x_1,x_2] \in \mathbb{R}^2: [x_1,x_2] \in \mathcal{D}(f)\}$ sa nazýva \textit{graf funkcie $f$}.
-
-
-\item Určite a načrtnite definičné obory nasledujúcich funkcií
-
-\begin{enumerate}
-\item[a)]{$u=x+\sqrt{y}$}\hspace{\fill}[Polrovina $y\geq0$]
-\item[b)]{$u=\sqrt{1-x^2}+\sqrt{y^2-1}$}\hspace{\fill}[$|x|\leq 1$, $|y|\geq 1$]
-\item[c)]{$u=\sqrt{1-x^2-y^2}$}\hspace{\fill}[Kruh $x^2+y^2 \leq 1$]
-\item[d)]{$u=\frac{1}{\sqrt{x^2+y^2-1}}$}\hspace{\fill}[Vonkajšok kruhu $x^2+y^2>1$]
-\item[e)]{$u=\sqrt{1-(x^2+y)^2}$}\hspace{\fill}[$-1\leq x^2+y \leq 1$]
-\item[f)]{$u=\ln(-x-y)$}\hspace{\fill}[Polrovina $x+y < 0$]
-\item[g)]{$u=\arcsin(\frac{y}{x})$}\hspace{\fill}[Dvojica uhlov $|y|<|x|$, $x\neq 0$]
-\item[h)]{$u=\arcsin(\frac{x}{y^2})+\arcsin(1-y)$}\hspace{\fill}[Krivočiarý trojuholník vymedzený $y^2=x$, $y^2=-x$, $y=2$, $y \neq 0$]
-\item[i)]{$u=\ln(xy)$}\hspace{\fill}[dva kvadranty priestoru]
-\end{enumerate}
-
-\item Zostrojte vrstevnice nasledujúcich funkcií
-
-\begin{enumerate}
-\item[a)]{$z=x+y$}\hspace{\fill}[Rovnobežné priamky]
-\item[b)]{$z=x^2+y^2$}\hspace{\fill}[Sústredné kružnice]
-\item[c)]{$z=x^2-y^2$}\hspace{\fill}[Množina hyperbol so spoločnými asymptotami $y=\pm x$]
-\item[d)]{$z=(x+y)^2$}\hspace{\fill}[Rovnobežné priamky]
-\item[e)]{$z=\frac{y}{x}$}\hspace{\fill}[Zväzok priamok s vrcholom v počiatku sústavy súradníc s vylúčením tohoto vrcholu]
-\end{enumerate}
-
 
 \end{enumerate}

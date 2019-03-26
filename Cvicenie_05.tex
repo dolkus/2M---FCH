@@ -16,9 +16,9 @@ Bodem $[x_0;y_0]$ veďme rovinu $\sigma$ ve směru vektoru $\vec{s}$ kolmou na r
 
 \includegraphics[scale=0.5]{Obrazky/SmerDer.pdf}
 
-\item Směrovou derivaci lze vypočítat pomocí parciálních derivací funkce jako skalární součin směrového vektoru $\vec{s}$ s gradientem funkce $\vec{grad}f$. 
+\item Směrovou derivaci lze vypočítat pomocí parciálních derivací funkce jako skalární součin směrového vektoru $\vec{s}$ s gradientem funkce $\vec{\grad}f$. 
 $$
-f^\prime_s = \vec{grad}f \cdot \vec{s} 
+f^\prime_s = \vec{\grad} f \cdot \vec{s} 
            = (f^\prime_x; f^\prime_y) \cdot (s_x;s_y)
            = f^\prime_x \cdot s_x + f^\prime_y \cdot s_y
 $$
@@ -40,7 +40,7 @@ $$
 \item[b)]{$u=\ln(x+y^2)$}, $\vec{s}=(3;-4)$, $[x_0;y_0]=[2;1]$
 \hspace{\fill}[$-\frac{1}{3}$]
 \item[c)]{$u=(x^2y+y)^4$}, $\vec{s}=(5;12)$, $[x_0;y_0]=[2;-3]$
-\hspace{\fill}[]
+\hspace{\fill}[$0$]
 \end{enumerate}
 
 \item Najděte tečnou rovinu a normálu funkce $f(x;y)$ v bodě $A[x_0;y_0]$:
@@ -48,7 +48,7 @@ $$
 \item[a)]{$u=x^4+y^4-4x^2y^2$}, $A[3;2]$
 \hspace{\fill}[$\vec{n}=(-12;112;1)$]
 \item[b)]{$u=x\sin(x+y)+5$}, $A[\pi;\pi]$
-\hspace{\fill}[]
+\hspace{\fill}[$\vec{n}=(-\pi,-\pi,1)$]
 \end{enumerate}
 
 \item Taylorovým polynomem řádu $r$ se středem v bodě $A$ se rozumí polynom:
@@ -83,8 +83,20 @@ je tzv. $r$-tý diferenciál. Kupř. (pro fci dvou proměnných):
                      $
                      
                      
+\item Určete diferenciál funkce $f$ v bodě $A$
+\begin{enumerate}
+    \item[a)] $f=e^x\cos{y},A=[0,0]$ \hspace{\fill} [$\mathrm{d}x$] 
+    \item[b)] $f=\frac{1}{x^2+y^2},A=[-1,2]$ \hspace{\fill} [$\frac{2}{25}\mathrm{d}x-\frac{4}{25}\mathrm{d}y$]
+    \item[c)] $f=\frac{x^2-y^2}{xy},A=[2,2]$, při přírůstku $\vec{h}=(0.03,0.01)$ \hspace{\fill} [$0.02$]
+\end{enumerate}
+
+\item Určete druhý diferenciál funkce $f$ v bodě $A$
+\begin{enumerate}
+    \item[a)] $f=e^{xy},A=[0,0]$ \hspace{\fill} [$2\mathrm{d}x\mathrm{d}y$]
+    \item[b)] $f=x^2y^2,A=[1,1]$ \hspace{\fill} [$2\mathrm{d}x^2+8\mathrm{d}x\mathrm{d}y+2\mathrm{d}y^2$]
+\end{enumerate}
                      
-\item Určete Taylorův polynom příslušného stupně $n$ danné funkce $f(x;y)$ se středem v bodě $A=[x_0;y_0]$
+\item Určete Taylorův polynom příslušného stupně $n$ dané funkce $f(x;y)$ se středem v bodě $A=[x_0;y_0]$
 \begin{enumerate}
 \item[a)]{$f(x;y)=\ln(\sqrt{x^2+y^2})$}, $n=2$, $A=[-1;-1]$
 \hspace{\fill}[$\frac{1}{2}(\ln(2) -xy-2x-2y-3)$]
@@ -94,19 +106,19 @@ je tzv. $r$-tý diferenciál. Kupř. (pro fci dvou proměnných):
 \end{enumerate}
 
                      
-\item Určete Maclaurinov polynom příslušného stupně $k$ danné funkce $f(x;y)$
+\item Určete Maclaurinov polynom příslušného stupně $k$ dané funkce $f(x;y)$
 \begin{enumerate}
 \item[a)]{$f(x;y)=(1+x)^m(1+y)^n$}, $n,m \in \mathbb{N}$, $k \in \mathbb{N}$
 \hspace{\fill}[$1+mx+ny+\frac{m(m-1)}{2!}x^2+mnxy+\frac{n(n-1)}{2!}y^2+...$]
 \item[b)]{$f(x;y)=\ln(1+x+y)$}, $k=3$
-\hspace{\fill}[]
+\hspace{\fill}[$x+y-\frac{x^2}{2}-xy-\frac{y^2}{2}+\frac{x^3}{3}+x^2y+xy^2+\frac{y^3}{3}$]
 \item[c)]{$f(x;y)=e^x\sin(y)$}, $k=3$
-\hspace{\fill}[]
+\hspace{\fill}[$y+xy+\frac{1}{3!}(3x^2y-y^3)$]
 \item[d)]{$f(x;y)=e^x\cos(y)$}, $k=3$
-\hspace{\fill}[]
+\hspace{\fill}[$1+x+\frac{1}{2}(x^2-y^2)+\frac{1}{3!}(x^3-3xy^2)$]
 \item[e)]{$f(x;y)=\sin(x^2+y^2)$}, $k=3$
-\hspace{\fill}[]
+\hspace{\fill}[$x^2+y^2$]
 \item[f)]{$f(x;y)=\ln(1+x)\ln(1+y)$}, $k=3$
-\hspace{\fill}[]
+\hspace{\fill}[$xy-\frac{1}{2}(x^2y+xy^2)$]
 \end{enumerate}
 \end{enumerate}

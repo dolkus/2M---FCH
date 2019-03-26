@@ -79,4 +79,56 @@ Sylvestrovo kriterium říká, že kvadratická forma je indefinitní, není-li 
 
 V případě semidefinitnosti (tj. pokud jsou nerovnosti neostré) nelze o extrému rozhodnout, pro takové případy existují složitější podmínky (ne)existence lokálních extrémů, těmi se však zabývat nebudeme.
 
+
+\item Praktický (algoritmický) prístup k Sylvestrovmu kritériu:
+\begin{enumerate}
+    \item[a)] $f''_{xx}(A) < 0; det(H(A)) > 0 \implies $ ostré maximum v $A$
+    \item[b)] $f''_{xx}(A) > 0; det(H(A)) > 0 \implies $ ostré minimum v $A$
+    \item[c)] $det(H(A)) < 0 \implies $ sedlo v $A$ (není extrém)
+    \item[d)] $det(H(A)) = 0 \implies $ buď lokálne minimum, maximum alebo sedlo, ale musíme použít definici :(.
+    \item[e)] $f''_{xx}(A)=0$ a~$det(H(A)) = 0 \implies $ buď lokálne minimum, maximum alebo sedlo, ale musíme použít definici :(.
+    
+\end{enumerate}
+
+\item Nalezněte lokální extrémy následujících funkcí:
+\begin{enumerate}
+    \item[$a_K)$]{$f(x,y)=x \arctan(y+2)$}
+    \item[$b_K)$]{$f(x,y)=x^3y+x+y-\frac{1}{216y^2}$}
+    \item[$c_K)$]{$f(x,y)=x^2y-xy^2-e^{y+16}$}
+    \item[$d_K)$]{$f(x,y)=x^3-xy^2+\frac{9}{y^2}$}
+\end{enumerate}
+\item Řešení předchozího příkladu:
+\begin{enumerate}
+    \item[$a_K)$]{$f_x'(x,y)=\arctan(y+2)$\\
+    $f_y'(x,y)=x\frac{1}{1+(y+2)^2}$\\
+    Stacionární bod je zřejmý $A=[0,-2]$. \\
+    $f_{xx}''(x,y)=0$\\
+    $f_{yy}''(x,y)=x\frac{2(y+2)}{(1+(y+2)^2)^2}$\\
+    $f_{xy}''(x,y)=\frac{1}{1+(y+2)^2}$\\
+    $det(H(x,y))=0\cdot x\frac{2(y+2)}{(1+(y+2)^2)^2} -\frac{1}{(1+(y+2)^2)^2}$\\
+    Ze Sylvestrova kritéria vidíme, že $H(A)=-1<0$, tedy bod $A=[0,-2]$ je sedlovým bodem.}
+    \item[$c_K)$]{
+    $f_x'(x,y)=2xy-y^2$\\
+    $f_y'(x,y)=x^2-2xy-e^{y+16}$\\
+    Stacionární body $A=[-e^8,0]$ a $B=[e^8,0]$\\
+    $f_{xx}''(x,y)=2y$\\
+    $f_{yy}''(x,y)=-2x-e^{y+16}$\\
+    $f_{xy}''(x,y)=2x-2y$\\
+    $det(H(x,y))=2y (-2x-e^{y+16})-(2x-2y)^2=-4x^2$\\
+    $det(H(B))<0$ \\
+    $det(H(A))<0$ \\
+    Ze Sylvestrova kritéria vidíme, že $H(B)<0$ , $H(A)<$, tedy body $A,B$ jsou sedla.
+    }
+    \item[$d_K)$]{$f_x'(x,y)=3x^2-y^2$\\
+    $f_y'(x,y)=-2xy-\frac{18}{y^3}$\\
+    Stacionární bod získáme dosazením vztahu $x=-\frac{9}{y^4}$ (vztah získaný z $f_y'(x,y)=0$) do $3x^2=y^2$ ($f_x'(x,y)=0$). Stacionárnímy body teda jsou $A=[-1,\sqrt{3}]$ a $B=[-1,-\sqrt{3}]$\\
+    $f_{xx}''(x,y)=6x$\\
+    $f_{yy}''(x,y)=-2x+\frac{3^3 2}{y^4}$\\
+    $f_{xy}''(x,y)=-2y$\\
+    $det(H(x,y))=6x \cdot (-2x+\frac{3^3 2}{y^4}) -4y^2$\\
+    $det(H(A))=det(H(B))=-60$
+    Ze Sylvestrova kritéria vidíme, že $H(A)<0$ i $H(B)<0$, tedy body $A,B$ jsou sedla.}
+    
+\end{enumerate}
+
 \end{enumerate}
